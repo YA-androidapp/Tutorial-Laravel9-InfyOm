@@ -15,19 +15,19 @@
 </div>
 
 @push('page_scripts')
-    <script type="text/javascript">
-        $('#checked_at').datetimepicker({
-            format: 'YYYY-MM-DD HH:mm:ss',
-            useCurrent: true,
-            sideBySide: true
-        })
-    </script>
+<script type="text/javascript">
+    $('#checked_at').datetimepicker({
+        format: 'YYYY-MM-DD HH:mm:ss',
+        useCurrent: true,
+        sideBySide: true
+    })
+</script>
 @endpush
 
 <!-- Amount Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('amount', 'Amount:') !!}
-    {!! Form::number('amount', null, ['class' => 'form-control']) !!}
+    {!! Form::number('amount', null, ['class' => 'form-control', 'step'=>'any']) !!}
 </div>
 
 <!-- Number Field -->
