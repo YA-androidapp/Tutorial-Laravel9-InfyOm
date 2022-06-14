@@ -59,6 +59,22 @@ nano .env
 
 ./vendor/bin/sail php artisan vendor:publish --provider="InfyOm\Generator\InfyOmGeneratorServiceProvider"
 ./vendor/bin/sail php artisan infyom:publish
+
+./vendor/bin/sail composer require yajra/laravel-datatables
+./vendor/bin/sail php artisan vendor:publish --tag=datatables-buttons
+./vendor/bin/sail npm install --save datatables.net-bs5 datatables.net-buttons-bs5
+
+nano resources/js/bootstrap.js
+# require("bootstrap");
+# require("datatables.net-bs5")();
+# require("datatables.net-buttons-bs5")();
+
+nano resources/sass/app.scss
+# @import "~datatables.net-bs5/css/dataTables.bootstrap5.css";
+# @import "~datatables.net-buttons-bs5/css/buttons.bootstrap5.css";
+
+./vendor/bin/sail npm install
+./vendor/bin/sail npm run dev
 ```
 
 ---
