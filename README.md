@@ -96,6 +96,9 @@ nano database/migrations/\*_create_items_table.php
 ```bash
 ./vendor/bin/sail php artisan optimize
 ./vendor/bin/sail php artisan infyom:scaffold Item --fromTable --tableName=items
+
+./vendor/bin/sail php artisan route:clear
+./vendor/bin/sail php artisan route:cache
 ```
 
 ---

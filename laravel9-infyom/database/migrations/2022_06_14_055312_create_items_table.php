@@ -23,6 +23,8 @@ return new class extends Migration
             $table->text('title');
             $table->longText('notes');
 
+            $table->softDeletes();
+
             $table->timestamps();
         });
     }

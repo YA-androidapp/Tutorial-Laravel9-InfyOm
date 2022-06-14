@@ -28,6 +28,7 @@ class ItemFactory extends Factory
         'number' => $this->faker->randomDigitNotNull,
         'title' => $this->faker->text,
         'notes' => $this->faker->text,
+        'deleted_at' => $this->faker->date('Y-m-d H:i:s'),
         'created_at' => $this->faker->date('Y-m-d H:i:s'),
         'updated_at' => $this->faker->date('Y-m-d H:i:s')
         ];

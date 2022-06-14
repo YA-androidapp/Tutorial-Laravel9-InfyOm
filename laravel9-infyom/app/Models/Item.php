@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 /**
  * Class Item
  * @package App\Models
- * @version June 14, 2022, 6:08 am UTC
+ * @version June 14, 2022, 6:24 am UTC
  *
  * @property boolean $checked
  * @property string|\Carbon\Carbon $checked_at
@@ -70,6 +70,7 @@ class Item extends Model
         'number' => 'required|integer',
         'title' => 'required|string',
         'notes' => 'required|string',
+        'deleted_at' => 'nullable',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
     ];
