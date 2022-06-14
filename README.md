@@ -45,6 +45,22 @@ nano resources/views/layouts/app.blade.php
             - sail
 ```
 
+## infyomlabs/laravel-generator のインストール
+
+```bash
+nano .env
+# APP_URL=http://localhost
+
+./vendor/bin/sail composer require infyomlabs/laravel-generator
+./vendor/bin/sail composer require infyomlabs/adminlte-templates
+./vendor/bin/sail composer require doctrine/dbal
+./vendor/bin/sail composer require laravelcollective/html
+./vendor/bin/sail composer require laracasts/flash
+
+./vendor/bin/sail php artisan vendor:publish --provider="InfyOm\Generator\InfyOmGeneratorServiceProvider"
+./vendor/bin/sail php artisan infyom:publish
+```
+
 ---
 
 Copyright (c) 2022 YA-androidapp(<https://github.com/YA-androidapp>) All rights reserved.
