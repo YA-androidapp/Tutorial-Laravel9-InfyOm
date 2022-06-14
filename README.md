@@ -91,6 +91,13 @@ nano database/migrations/\*_create_items_table.php
 ./vendor/bin/sail php artisan migrate
 ```
 
+## スキャフォールド
+
+```bash
+./vendor/bin/sail php artisan optimize
+./vendor/bin/sail php artisan infyom:scaffold Item --fromTable --tableName=items
+```
+
 ---
 
 Copyright (c) 2022 YA-androidapp(<https://github.com/YA-androidapp>) All rights reserved.
