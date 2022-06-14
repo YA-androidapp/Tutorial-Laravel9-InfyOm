@@ -77,6 +77,20 @@ nano resources/sass/app.scss
 ./vendor/bin/sail npm run dev
 ```
 
+## マイグレーション
+
+`items` テーブルを対象とする場合
+
+- [Laravel 9.x マイグレーション](https://readouble.com/laravel/9.x/ja/migrations.html)
+
+```bash
+./vendor/bin/sail php artisan make:migration create_items_table --create=items
+
+nano database/migrations/\*_create_items_table.php
+
+./vendor/bin/sail php artisan migrate
+```
+
 ---
 
 Copyright (c) 2022 YA-androidapp(<https://github.com/YA-androidapp>) All rights reserved.
